@@ -6,13 +6,13 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 16:42:53 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/23 16:44:41 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/24 00:50:41 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strsrt(const char *haystack, const char *needle)
+char	*ft_strstr(const char *s1, const char *s2)
 {
 	unsigned int	i;
 	unsigned int	j;
