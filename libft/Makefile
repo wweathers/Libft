@@ -6,13 +6,13 @@
 #    By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/23 14:40:38 by wiweathe          #+#    #+#              #
-#    Updated: 2018/04/23 15:38:00 by wiweathe         ###   ########.fr        #
+#    Updated: 2018/04/29 22:37:19 by wiweathe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAG = -Wall -Wextra -Werror
-
 NAME = libft.a
+
+FLAG = -c -Wall -Wextra -Werror
 
 SRC = ft_atoi.c \
 	  ft_bzero.c \
@@ -76,19 +76,25 @@ SRC = ft_atoi.c \
 
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
-
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)	
+	@echo "$(NAME) created"
+	@ranlib $(NAME)
+	@echo "$(NAME) indexed"
+
+all: $(NAME)
 
 %.o: %.c
-	@gcc $(FLAG) -c $< -o $@
+	@gcc $(FLAG) $< -o $@
 
 clean:
 	@rm -f $(OBJ)
+	@echo "OBJ deleted"
 
 fclean: clean
 	@rm -f $(NAME)
+	@echo "$(NAME) deleted"
 
 re: fclean all
+
+.PHONY: clean, fclean, re

@@ -6,7 +6,7 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 18:45:11 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/23 14:03:39 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/29 21:56:32 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int		len;
 
-	i = ft_strlen(s);
-	if (c == 0)
-		return ((char *)s + i);
-	while (i >= 0)
-	{
-		if (s[i] == c)
-			return ((char *)s + 1);
-		i--;
-	}
+	len = ft_strlen((char *)s);
+	while (0 != len && s[len] != (char)c)
+		len--;
+	if (s[len] == (char)c)
+		return ((char *)&s[len]);
 	return (NULL);
 }

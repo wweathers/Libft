@@ -6,10 +6,11 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 14:16:04 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/21 09:39:36 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/29 20:36:30 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
@@ -21,7 +22,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	{
 		dst[i] = src[i];
 		i++;
-		dst[i] = '\0';
 	}
+	dst[i] = '\0';
 	return (dst);
 }

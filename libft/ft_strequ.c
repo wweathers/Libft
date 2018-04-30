@@ -6,7 +6,7 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 16:24:22 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/23 16:28:31 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/29 21:43:58 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,5 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	int i;
-
-	i = 0;
-	{
-		if (s1[i] == s2[i])
-			return (1);
-		else
-			return (0);
-	}
+	return (ft_strcmp(s1, s2) ? 0 : 1);
 }

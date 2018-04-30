@@ -6,7 +6,7 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 17:36:57 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/21 13:01:11 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/29 22:31:02 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,29 @@
 
 int		ft_atoi(const char *str)
 {
-	long			res;
-	long			sign;
-	unsigned int	i;
+	int				i;
+	long long int	result;
+	long long int	neg;
 
-	res = 0;
-	sign = 1;
 	i = 0;
-	while (str[i] == '\r' || str[i] == '\v' || str[i] == '\f' || str[i] == ' '
-			|| str[i] == '\t' || str[i] == '\n')
-	{
+	neg = 1;
+	result = 0;
+	while (str[i] == 32 || str[i] == 10 || str[i] == 9 || str[i] == 12 ||
+			str[i] == 13 || str[i] == 11)
 		i++;
-	}
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign = -1;
+			neg = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i])
 	{
-		res = res * 10 + str[i] - '0';
+		if (str[i] < 48 || 57 < str[i])
+			return (result * neg);
+		else
+			result = (result * 10) + (long long int)(str[i] - '0');
 		i++;
 	}
-	return ((int)(res * sign));
+	return (result * neg);
 }

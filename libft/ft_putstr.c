@@ -6,16 +6,11 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 12:42:42 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/23 15:57:02 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/25 11:10:48 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_putstr(char const *str)
 {

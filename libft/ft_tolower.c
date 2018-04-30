@@ -6,13 +6,13 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/20 18:14:07 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/20 18:15:22 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/25 20:41:29 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		tolower(int c)
+int		ft_tolower(int c)
 {
 	while (c >= 'A' && c <= 'Z')
 		c = c + 32;

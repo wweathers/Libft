@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/21 09:07:09 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/24 00:23:10 by wiweathe         ###   ########.fr       */
+/*   Created: 2018/04/25 12:41:38 by wiweathe          #+#    #+#             */
+/*   Updated: 2018/04/25 20:40:36 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_putstr(char const *str);
+void				ft_putstr(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
