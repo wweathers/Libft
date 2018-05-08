@@ -6,7 +6,7 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 19:59:03 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/24 00:23:42 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/04/29 23:04:37 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	unsigned int i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s && f)
 	{
-		f(s + i);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			f(&s[i]);
+			i++;
+		}
 	}
 }

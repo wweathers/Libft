@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstat.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/20 18:21:49 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/05/06 15:06:42 by wiweathe         ###   ########.fr       */
+/*   Created: 2018/05/07 17:46:47 by wiweathe          #+#    #+#             */
+/*   Updated: 2018/05/07 17:48:30 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+t_list	*ft_lstat(t_list *lst, size_t value)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
-	while ((s1[i] != '\0' && s2[i] != '\0') && (s1[i] == s2[i]))
+	while (i < value && lst != NULL)
+	{
+		lst = lst->next;
 		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	return (lst);
 }

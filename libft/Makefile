@@ -6,7 +6,7 @@
 #    By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/23 14:40:38 by wiweathe          #+#    #+#              #
-#    Updated: 2018/04/29 22:37:19 by wiweathe         ###   ########.fr        #
+#    Updated: 2018/05/07 17:49:58 by wiweathe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,9 @@ SRC = ft_atoi.c \
 	  ft_lstiter.c \
 	  ft_lstnew.c \
 	  ft_lstmap.c \
+	  ft_ispunct.c \
+	  ft_lstat.c \
+	  ft_isspace.c \
 
 
 OBJ = $(SRC:.c=.o)
@@ -97,4 +100,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean, fclean, re
+.PHONY: all, clean, fclean, re

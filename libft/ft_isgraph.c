@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/20 18:21:49 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/05/06 15:06:42 by wiweathe         ###   ########.fr       */
+/*   Created: 2018/05/07 18:13:16 by wiweathe          #+#    #+#             */
+/*   Updated: 2018/05/07 18:16:41 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(const char *s1, const char *s2)
-{
-	unsigned int i;
+#include "libft.h"
 
-	i = 0;
-	while ((s1[i] != '\0' && s2[i] != '\0') && (s1[i] == s2[i]))
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+int		ft_isgraph(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= 0 && c <= 9))
+		return (1);
+	else
+		return (0);
 }

@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/20 18:21:49 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/05/06 15:06:42 by wiweathe         ###   ########.fr       */
+/*   Created: 2018/05/07 18:24:33 by wiweathe          #+#    #+#             */
+/*   Updated: 2018/05/07 18:53:50 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(const char *s1, const char *s2)
-{
-	unsigned int i;
+#include <stdio.h>
+#include "libft.h"
 
-	i = 0;
-	while ((s1[i] != '\0' && s2[i] != '\0') && (s1[i] == s2[i]))
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+void	ft_swap(int *x, int *y)
+{
+	int tmp;
+
+	tmp = *x;
+	*x = *y;
+	*y = tmp;
 }

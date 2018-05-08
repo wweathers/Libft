@@ -6,10 +6,11 @@
 /*   By: wiweathe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 18:48:53 by wiweathe          #+#    #+#             */
-/*   Updated: 2018/04/29 20:02:11 by wiweathe         ###   ########.fr       */
+/*   Updated: 2018/05/07 19:19:03 by wiweathe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 static int	ft_count(char const *s, char c)
@@ -52,6 +53,8 @@ char		**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	k = 0;
+	if (s == NULL)
+		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (ft_count(s, c)) + 1);
 	if (tab == NULL)
 		return (NULL);
@@ -63,10 +66,7 @@ char		**ft_strsplit(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-		{
-			tab[k] = ft_strndup(s + j, i - j);
-			k++;
-		}
+			tab[k++] = ft_strndup(s + j, i - j);
 	}
 	tab[k] = NULL;
 	return (tab);
